@@ -1,133 +1,155 @@
-/*html{
-    font-size: 10px;
-}*/
+html {
+    scroll-behavior: smooth;
+}
 
-body{
-    /*font-size: 1.6rem;*/
+body {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
 }
-.wrapper{
+
+.wrapper {
     max-width: 1222px;
     margin: 0 auto;
 }
-h2{
+
+h2 {
     font-family: 'Inika';
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
 }
-h4{
+
+h4 {
     font-weight: 700;
     font-size: 20px;
-    line-height: 100%; /* or 20px */
+    line-height: 100%;
+    /* or 20px */
     color: #E06733;
 }
-.button{
+
+.button {
     transition: all .5s;
 }
-.button:hover{
+
+.button:hover {
     background-color: #E06733;
     color: #ffffff;
 }
-.layout-3-column{
+
+.layout-3-column {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.layout-2-column{
+
+.layout-2-column {
     display: flex;
     justify-content: space-between;
 
 }
 
 /*Style header*/
-.header{
+.header {
     background: #EDF2EC;
     padding: 43px 0 41px 0;
 }
-.header__wrapper{
+
+.header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    /*align-items: center;*/
 }
-.icon_logo{
+
+.icon_logo {
     background-image: url(./assets/svg/logo_vector.svg);
     width: 20px;
     height: 20px;
     display: inline-block;
-    
+
 }
-.logo{
-    
+
+.logo {
+
     font-family: 'Inika';
     font-size: 16px;
     line-height: 21px;
     color: #000000;
 }
-.navigation{
+
+.navigation {
     display: flex;
     flex-wrap: wrap;
 }
-.navigation__item{
+
+.navigation__item {
     margin-right: 46px;
     list-style: none;
 }
-.navigation__item:last-child{
+
+.navigation__item:last-child {
     margin-right: 3px;
 }
-.navigation__link{
+
+.navigation__link {
     text-decoration: none;
     font-family: 'Inika';
     font-size: 16px;
-    line-height: 50px; /*identical to box height, or 312% */
+    line-height: 50px;
+    /*identical to box height, or 312% */
     color: #010201;
     transition: all .3s;
 }
-.navigation__link_home{
-    color:#E06733;
+
+.navigation__link_home {
+    color: #E06733;
     font-weight: 700;
 }
-.navigation__link:hover{
-    color:#E06733;
+
+.navigation__link:hover {
+    color: #E06733;
     font-weight: 700;
 }
 
 /*END style header*/
 
 /*Style welcome*/
-.welcome{
+.welcome {
     background: #EDF2EC;
     padding: 98px 0 94px 0;
 }
-.welcome__wrapper{
+
+.welcome__wrapper {
     display: flex;
     justify-content: right;
     align-items: center;
     position: relative;
 }
-.welcome__title{
+
+.welcome__title {
     margin-bottom: 44px;
     max-width: 549px;
     font-weight: 700;
     font-size: 45px;
-    line-height: 111%; /*50px*/
+    line-height: 111%;
+    /*50px*/
     color: #717171;
 }
-.welcome__title_colored{
+
+.welcome__title_colored {
     color: #499A18;
 }
 
-.welcome__p{
+.welcome__p {
     max-width: 549px;
     margin-bottom: 47px;
     font-size: 20px;
-    line-height: 35px;/* or 175% */
+    line-height: 35px;
+    /* or 175% */
     color: #636060;
 }
-.button_caps{
+
+.button_caps {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
@@ -138,7 +160,8 @@ h4{
     color: #000000;
     background-color: transparent;
 }
-.leafs{
+
+.leafs {
     background-image: url(./assets/svg/leafs.svg);
     position: absolute;
     left: 0px;
@@ -148,62 +171,74 @@ h4{
     width: 448.8px;
     height: 407.36px;
 }
+
 /*END style welcome*/
 
 /*Style about*/
-.about__wrapper{
+.about__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.about{
+
+.about {
     background: #ffffff;
     padding: 93px 0 94px 0;
 }
-.about__title{
+
+.about__title {
     max-width: 463px;
     margin-top: 12px;
     margin-bottom: 38px;
 }
-.about__p{
+
+.about__p {
     margin-top: 0px;
     max-width: 605px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;/* or 175% */
+    line-height: 30px;
+    /* or 175% */
     color: #636060;
 }
-.about__title_colored{
+
+.about__title_colored {
     color: #E06733;
 }
-.houseplant{
+
+.houseplant {
     background-image: url(./assets/svg/houseplant\ 1.svg);
     width: 464px;
     height: 479px;
 }
+
 /*END style about*/
 
 /*Style services*/
-.service{
+.service {
     background: #EDF2EC;
 }
-.service__head{
+
+.service__head {
     padding: 40px 0 80px;
     display: flex;
     align-items: center;
 
 }
-.service__title{
+
+.service__title {
     max-width: 306px;
     margin-right: 142px;
 }
-.button_tipical{
+
+.button_tipical {
     padding: 0px;
     margin-right: 34px;
     font-family: 'Inika';
     font-size: 20px;
-    line-height: 26px;/* identical to box height */
+    line-height: 26px;
+    /* identical to box height */
     color: #E06733;
     width: 161px;
     height: 50px;
@@ -212,45 +247,51 @@ h4{
     background-color: transparent;
 
 }
-.project__image_first{
+
+.project__image_first {
     background-image: url(./assets/png/first.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 329px;
     height: 350px;
-    
+
 }
-.project__image_second{
+
+.project__image_second {
     background-image: url(./assets/png/second.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 329px;
     height: 350px;
-    
+
 }
-.project__image_third{
+
+.project__image_third {
     background-image: url(./assets/png/third.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 329px;
     height: 350px;
-    
+
 }
-.project__image_fourth{
+
+.project__image_fourth {
     background-image: url(./assets/png/fourth.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 329px;
     height: 350px;
 }
-.project__image_fifth{
+
+.project__image_fifth {
     background-image: url(./assets/png/fifth.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 329px;
     height: 350px;
 }
-.project__image_sixth{
+
+.project__image_sixth {
     background-image: url(./assets/png/sixth.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -258,36 +299,43 @@ h4{
     height: 350px;
 }
 
-.project__title{
+.project__title {
     margin-top: 10px;
     margin-bottom: 12px;
     text-align: center;
 }
-.project__p{
+
+.project__p {
     margin-bottom: 36px;
     font-size: 16px;
-    line-height: 20px;/* identical to box height, or 125% */
+    line-height: 20px;
+    /* identical to box height, or 125% */
     color: #717171;
     text-align: center;
 }
-.projects__first-row{
+
+.projects__first-row {
     margin-bottom: 55px;
 }
-.projects__second-row{
+
+.projects__second-row {
     margin-bottom: 121px;
 }
-.block-shadowed{
+
+.block-shadowed {
     box-sizing: border-box;
     border: 1px solid #E3E1D5;
     border-radius: 0 0 20px 20px;
 }
+
 /*END style services*/
 
 /*Prices style*/
-.prices{
+.prices {
     background: #ffffff;
 }
-.prices__title{
+
+.prices__title {
     padding-top: 39px;
     font-family: 'Inter';
     font-weight: bold;
@@ -295,10 +343,12 @@ h4{
     line-height: 48px;
     color: #000000;
 }
-.prices__title_colored{
+
+.prices__title_colored {
     color: #499A18;
 }
-.prices__block_shadowed{
+
+.prices__block_shadowed {
     box-sizing: border-box;
     margin-top: 60px;
     margin-bottom: 127px;
@@ -306,19 +356,22 @@ h4{
     border: 1px solid #E3E1D5;
     border-radius: 20px;
 }
-.prices__title_right{
+
+.prices__title_right {
     max-width: 452px;
     line-height: 50px;
     padding-bottom: 40px;
     text-align: end;
 }
-.button_bold{
+
+.button_bold {
     padding: 0px;
     float: right;
     font-family: 'Inika';
     font-weight: 700;
     font-size: 20px;
-    line-height: 26px;/* identical to box height */
+    line-height: 26px;
+    /* identical to box height */
     text-align: center;
     color: #E06733;
     border: 1px solid #E06733;
@@ -328,11 +381,13 @@ h4{
     background-color: transparent;
 
 }
-.prices__column-second{
+
+.prices__column-second {
     position: relative;
 
 }
-.leafs_small{
+
+.leafs_small {
     position: absolute;
     right: 0px;
     bottom: 110px;
@@ -342,15 +397,17 @@ h4{
     width: 152px;
     height: 174.99px;
 }
-.accordion__header_prices{
+
+.accordion__header_prices {
     box-sizing: border-box;
     width: 250px;
     height: 50px;
     margin-bottom: 32px;
-    padding:15px  39px;
+    padding: 15px 39px;
     font-weight: bold;
     font-size: 20px;
-    line-height: 20px;/* or 100% */
+    line-height: 20px;
+    /* or 100% */
     color: #000000;
     background-color: #EDF2EC;
     border-radius: 20px;
@@ -358,38 +415,45 @@ h4{
     display: flex;
     justify-content: space-between;
 }
-.accordion__header_last{
+
+.accordion__header_last {
     margin-bottom: 0px;
 }
-.prices-accordion{
+
+.prices-accordion {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.prices-accordion__arrow{
+
+.prices-accordion__arrow {
     background-image: url(./assets/svg/accordion_btn.svg);
     width: 16px;
     height: 16px;
     display: inline-block;
     text-align: center;
 }
+
 /*END style prices*/
 
 /*Style contacts*/
-.contacts{
+.contacts {
     background: #EDF2EC;
 }
-.contacts__title{
+
+.contacts__title {
     font-weight: bold;
     text-align: center;
     padding: 60px 0 36px 0;
 }
-.contacts__wrapper{
+
+.contacts__wrapper {
     height: 550px;
     position: relative;
 }
-.accordion__header_contacts{
+
+.accordion__header_contacts {
     margin-left: 772px;
     padding-left: 20px;
     padding-right: 35px;
@@ -397,7 +461,8 @@ h4{
     width: 450px;
     height: 50px;
     font-size: 20px;
-    line-height: 40px;/* identical to box height, or 200% */
+    line-height: 40px;
+    /* identical to box height, or 200% */
     letter-spacing: 0.05em;
     color: #717171;
     background: #D6E7D2;
@@ -408,85 +473,102 @@ h4{
     display: flex;
     justify-content: space-between;
 }
-.contacts__accordion__arrow{
+
+.contacts__accordion__arrow {
     background-image: url(./assets/svg/accordion_btn_dark.svg);
     width: 16px;
     height: 16px;
     display: inline-block;
     text-align: center;
 }
-.background__woman{
+
+.background__woman {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    background-image:  url(./assets/svg/contact_woman.svg);
+    background-image: url(./assets/svg/contact_woman.svg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 496.99px;
 }
+
 /*END style contacts*/
 
 /*Style footer*/
-.footer{
+.footer {
     padding: 40px 0;
     background: #ffffff;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 50px;/* identical to box height, or 250% */
+    line-height: 50px;
+    /* identical to box height, or 250% */
     color: #000000;
 }
-.footer__link{
+
+.footer__link {
     text-decoration: none;
     color: #010201;
 }
-.footer__link_middle{
+
+.footer__link_middle {
     margin-left: 17px;
 }
-.footer__content{
-    
+
+.footer__content {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.footer__item_first{
+
+.footer__item_first {
     margin-right: 20px;
 }
-.footer__item_first:last-child{
+
+.footer__item_first:last-child {
     margin-right: 0px;
 }
-.footer__item_second{
+
+.footer__item_second {
     padding-top: 0px;
     margin-right: 30px;
 }
-.footer__item_spec{
+
+.footer__item_spec {
     margin-right: 26px;
 }
-.footer__item_second:last-child{
+
+.footer__item_second:last-child {
     margin-right: 3px;
 }
-.icon_contact{
+
+.icon_contact {
     display: block;
 }
-.icon_contact__instagram{
-    background-image: url(./assets/svg/instagram.svg);   
+
+.icon_contact__instagram {
+    background-image: url(./assets/svg/instagram.svg);
     width: 26.66px;
     height: 26.65px;
 }
-.icon_contact__facebook{
+
+.icon_contact__facebook {
     background-image: url(./assets/svg/facebook.svg);
     width: 16.67px;
-    height: 26.67px;   
+    height: 26.67px;
 }
-.icon_contact__twitter{
-    background-image: url(./assets/svg/twitter.svg);   
+
+.icon_contact__twitter {
+    background-image: url(./assets/svg/twitter.svg);
     width: 26.67px;
     height: 21.67px;
 }
-.icon_contact__pinterest{
-    background-image: url(./assets/svg/pinterest.svg);   
+
+.icon_contact__pinterest {
+    background-image: url(./assets/svg/pinterest.svg);
     width: 26.57px;
     height: 26.67px;
 }
