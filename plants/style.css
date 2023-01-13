@@ -101,11 +101,6 @@ h4 {
     transition: all .3s;
 }
 
-.navigation__link_home {
-    color: #E06733;
-    font-weight: 700;
-}
-
 .navigation__link:hover {
     color: #E06733;
     font-weight: 700;
@@ -116,14 +111,15 @@ h4 {
 /*Style welcome*/
 .welcome {
     background: #EDF2EC;
-    padding: 98px 0 94px 0;
+    padding: 62px 0 62.64px 0;
 }
 
 .welcome__wrapper {
     display: flex;
-    justify-content: right;
+    /*justify-content: right;*/
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+    /*position: relative;*/
 }
 
 .welcome__title {
@@ -131,8 +127,7 @@ h4 {
     max-width: 549px;
     font-weight: 700;
     font-size: 45px;
-    line-height: 111%;
-    /*50px*/
+    line-height: 50px;
     color: #717171;
 }
 
@@ -163,9 +158,9 @@ h4 {
 
 .leafs {
     background-image: url(./assets/svg/leafs.svg);
-    position: absolute;
+    /*position: absolute;
     left: 0px;
-    top: -36px;
+    top: -36px;*/
     background-size: contain;
     background-repeat: no-repeat;
     width: 448.8px;
@@ -211,6 +206,8 @@ h4 {
     background-image: url(./assets/svg/houseplant\ 1.svg);
     width: 464px;
     height: 479px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /*END style about*/
@@ -314,11 +311,21 @@ h4 {
     text-align: center;
 }
 
+.grid-layout-3-column {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 117px;
+    /*row-gap: 55px;*/
+}
+
 .projects__first-row {
+    grid-column: span 2;
     margin-bottom: 55px;
+
 }
 
 .projects__second-row {
+    grid-column: span 2;
     margin-bottom: 121px;
 }
 
@@ -365,8 +372,8 @@ h4 {
 }
 
 .button_bold {
-    padding: 0px;
-    float: right;
+
+    margin-bottom: 39px;
     font-family: 'Inika';
     font-weight: 700;
     font-size: 20px;
@@ -383,14 +390,16 @@ h4 {
 }
 
 .prices__column-second {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
 }
 
 .leafs_small {
-    position: absolute;
+    /*position: absolute;
     right: 0px;
-    bottom: 110px;
+    bottom: 110px;*/
     background-image: url(./assets/svg/leafs_small.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -571,4 +580,262 @@ h4 {
     background-image: url(./assets/svg/pinterest.svg);
     width: 26.57px;
     height: 26.67px;
+}
+
+
+@media (max-width: 1439px) and (min-width: 768px) {
+    .wrapper {
+        max-width: 668px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 35px;
+        line-height: 46px;
+    }
+
+    /*HEADER TABLET*/
+    .header {
+        padding: 35px 0px;
+    }
+
+    .navigation__link {
+        line-height: 47px;
+    }
+
+    /*WELCOME TABLET*/
+    .welcome {
+        padding: 40px 0 70px 0;
+    }
+
+    .welcome__wrapper {
+        align-items: flex-start;
+    }
+
+    .welcome__title {
+        margin-bottom: 31px;
+        max-width: 341px;
+        font-size: 35px;
+    }
+
+    .leafs {
+        order: 2;
+        width: 280px;
+        height: 254.15px;
+    }
+
+    .welcome__p {
+        margin-left: 5px;
+        max-width: 341px;
+        margin-bottom: 35px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /*ABOUT TABLET*/
+    .about__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .about {
+        padding: 40px 0 95px 0;
+    }
+
+    .about__title {
+        text-align: center;
+        margin-left: 122px;
+        max-width: 423px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .about__p {
+        margin-top: 0px;
+        margin-bottom: 68px;
+        max-width: 668px;
+        font-size: 20px;
+    }
+
+    .houseplant {
+        background-image: url(./assets/svg/houseplant\ 1.svg);
+        width: 250px;
+        height: 258px;
+    }
+
+    /*SERVICE TABLET*/
+    .service__head {
+        padding: 60px 0 40px 0;
+        flex-wrap: wrap;
+    }
+
+    .service__title {
+        max-width: 306px;
+        margin-right: 0px;
+        margin-bottom: 42px;
+    }
+
+    .grid-layout-3-column {
+        padding-bottom: 31px;
+
+        column-gap: 107px;
+        /*row-gap: 38px;*/
+    }
+
+    .projects__first-row {
+        grid-column: span 3;
+        margin-bottom: 34px;
+
+    }
+
+    .projects__second-row {
+        grid-column: span 3;
+        margin-bottom: 34px;
+    }
+
+    .project__image_first {
+        background-image: url(./assets/png/first_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 351px;
+
+    }
+
+    .project__image_second {
+        background-image: url(./assets/png/second_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 351px;
+
+    }
+
+    .project__image_third {
+        background-image: url(./assets/png/third_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 350px;
+
+    }
+
+    .project__image_fourth {
+        background-image: url(./assets/png/fourth_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 350px;
+    }
+
+    .project__image_fifth {
+        background-image: url(./assets/png/fifth_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 350px;
+    }
+
+    .project__image_sixth {
+        background-image: url(./assets/png/sixth_tablet.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 280px;
+        height: 350px;
+    }
+
+    .project__p {
+        max-width: 201px;
+        margin-left: 38px;
+        margin-bottom: 20px;
+    }
+
+    .project__title_fifth,
+    .project__title_third,
+    .project__title_first {
+        margin-bottom: 9px;
+        margin-top: 9px;
+    }
+
+    /*PRICES TABLET*/
+
+
+    .prices__title {
+        padding-top: 40px;
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .prices__title_prices {
+        padding-left: 14px;
+    }
+
+    .prices__block_shadowed {
+        margin-top: 56px;
+        margin-bottom: 163px;
+        padding: 34px 41px;
+    }
+
+    .prices__title_right {
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 296px;
+        padding-top: 140px;
+        padding-bottom: 28px;
+    }
+
+    .button_bold {
+        margin-bottom: 34px;
+    }
+
+    .prices__column-second {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .leafs_small {
+        width: 152px;
+        height: 174.99px;
+    }
+
+    .accordion__header_prices {
+        box-sizing: border-box;
+        width: 250px;
+        height: 50px;
+        margin-bottom: 32px;
+        padding: 15px 39px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        /* or 100% */
+        color: #000000;
+        background-color: #EDF2EC;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .accordion__header_last {
+        margin-bottom: 0px;
+    }
+
+    .prices-accordion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .prices-accordion__arrow {
+        background-image: url(./assets/svg/accordion_btn.svg);
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        text-align: center;
+    }
+
 }
