@@ -12,7 +12,7 @@
         rel="stylesheet">
     <title>Plants</title>
     <link rel="icon" href="./assets/logo_vector.ico">
-    <script src="index.js"></script>
+
 </head>
 
 <body>
@@ -23,14 +23,24 @@
             </div>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="navigation__item"><a href="#home" class="navigation__link navigation__link_home">Home</a>
+                    <li class="navigation__item"><a href="#home" class="navigation__link">Home</a>
                     </li>
                     <li class="navigation__item"><a href="#about" class="navigation__link">About us</a></li>
                     <li class="navigation__item"><a href="#service" class="navigation__link">Service</a></li>
                     <li class="navigation__item"><a href="#prices" class="navigation__link">Price</a></li>
                     <li class="navigation__item"><a href="#contacts" class="navigation__link">Contacts</a></li>
                 </ul>
+                <div class="header__nav-close">
+                    <span class="header__nav-close-line"></span>
+                    <span class="header__nav-close-line"></span>
+                </div>
             </nav>
+            <div class="header__burger burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -72,48 +82,48 @@
                         <button class="button button_tipical">Planting</button>
                     </div>
                 </div>
-                <div class="layout-3-column">
+                <div class="grid-layout-3-column">
                     <div class="projects__first-row">
                         <div class="project__image_first"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Garden care</h4>
+                            <h4 class="project__title project__title_first">Garden care</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="projects__first-row">
                         <div class="project__image_second"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Planting</h4>
+                            <h4 class="project__title project__title_second">Planting</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="projects__first-row">
                         <div class="project__image_third"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Lawn care</h4>
+                            <h4 class="project__title project__title_third">Lawn care</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                </div>
-                <div class="layout-3-column">
+                    <!--</div>
+                <div class="grid-layout-3-column">-->
                     <div class="projects__second-row">
                         <div class="project__image_fourth"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Planting</h4>
+                            <h4 class="project__title project__title_fourth">Planting</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="projects__second-row">
                         <div class="project__image_fifth"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Garden care</h4>
+                            <h4 class="project__title project__title_fifth">Garden care</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
-                    <div class="projects__second-row">
+                    <div class="projects__second-row project_last">
                         <div class="project__image_sixth"></div>
                         <div class="block-shadowed">
-                            <h4 class="project__title">Planting</h4>
+                            <h4 class="project__title project__title_sixth">Planting</h4>
                             <p class="project__p">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
@@ -124,7 +134,7 @@
             <div class="wrapper">
                 <div class="layout-2-column">
                     <div class="prices__column-first">
-                        <h2 class="prices__title">Prices</h2>
+                        <h2 class="prices__title prices__title_prices">Prices</h2>
                         <div class="prices__accordion prices__block_shadowed">
                             <div class="accordion__item accordion__item_show">
                                 <div class="accordion__header accordion__header_prices">
@@ -163,8 +173,8 @@
         </section>
         <section id="contacts" class="contacts">
             <div class="wrapper contacts__wrapper">
+
                 <h2 class="contacts__title">Contact us </h2>
-                <div class="background__woman"></div>
                 <div class="contacts__accordion">
                     <div class="accordion__item accordion__item_show">
                         <div class="accordion__header accordion__header_contacts">
@@ -175,38 +185,39 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="background__woman"></div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="wrapper footer__wrapper">
-            <div class="layout-3-column">
-                <div>
-                    <ul class="footer__content">
-                        <li class="footer__item_first">&copy;</li>
-                        <li class="footer__item_first">2022</li>
-                        <li class="footer__item_first"><a href="https://github.com/TatianaLevina"
-                                class="footer__link">github</a></li>
-                    </ul>
-                </div>
-                <a href="https://rs.school/js-stage0/" class="footer__link footer__link_middle">Rolling Scopes
-                    School</a>
-                <div>
-                    <ul class="footer__content">
-                        <li class="footer__item_second"><a href="#"
-                                class="icon icon_contact icon_contact__instagram"></a></li>
-                        <li class="footer__item_second"><a href="#"
-                                class="icon icon_contact icon_contact__facebook"></a></li>
-                        <li class="footer__item_second footer__item_spec"><a href="#"
-                                class="icon icon_contact icon_contact__twitter"></a></li>
-                        <li class="footer__item_second"><a href="#"
-                                class="icon icon_contact icon_contact__pinterest"></a></li>
-                    </ul>
-                </div>
+            <!--<div class="layout-3-column">-->
+            <div>
+                <ul class="footer__content">
+                    <li class="footer__item_first">&copy;</li>
+                    <li class="footer__item_first">2022</li>
+                    <li class="footer__item_first"><a href="https://github.com/TatianaLevina"
+                            class="footer__link">github</a></li>
+                </ul>
             </div>
+            <a href="https://rs.school/js-stage0/" class="footer__link footer__link_middle">Rolling Scopes
+                School</a>
+            <div>
+                <ul class="footer__content">
+                    <li class="footer__item_second"><a href="#" class="icon icon_contact icon_contact__instagram"></a>
+                    </li>
+                    <li class="footer__item_second"><a href="#" class="icon icon_contact icon_contact__facebook"></a>
+                    </li>
+                    <li class="footer__item_second footer__item_spec"><a href="#"
+                            class="icon icon_contact icon_contact__twitter"></a></li>
+                    <li class="footer__item_second"><a href="#" class="icon icon_contact icon_contact__pinterest"></a>
+                    </li>
+                </ul>
+            </div>
+            <!--</div>-->
         </div>
     </footer>
 </body>
+<script src="index.js"></script>
 
 </html>
