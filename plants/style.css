@@ -62,7 +62,7 @@ h4 {
 }
 
 .icon_logo {
-    background-image: url(./assets/svg/logo_vector.svg) ;
+    background-image: url(./assets/svg/logo_vector.svg);
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -104,6 +104,10 @@ h4 {
 .navigation__link:hover {
     color: #E06733;
     font-weight: 700;
+}
+
+.header__burger {
+    display: none;
 }
 
 /*END style header*/
@@ -594,7 +598,7 @@ h4 {
 }
 
 
-@media (max-width: 1439px) and (min-width: 381px) {
+@media (max-width: 1439px) and (min-width: 550px) {
     .wrapper {
         max-width: 668px;
         margin: 0 auto;
@@ -877,7 +881,7 @@ h4 {
 
 }
 
-@media (max-width: 380px) {
+@media (max-width: 549px) {
     .wrapper {
         max-width: 330px;
         margin: 0 auto;
@@ -888,6 +892,7 @@ h4 {
         padding: 36px 0px 35px 0px;
         position: relative;
     }
+
     .header__burger {
         position: absolute;
         top: 34px;
@@ -898,13 +903,15 @@ h4 {
         flex-direction: column;
         justify-content: space-between;
     }
+
     .burger__line {
         display: block;
         width: 40px;
         height: 2px;
         background-color: #717171;
     }
-    .header__navigation{
+
+    .header__navigation {
         position: fixed;
         top: 0;
         right: 0;
@@ -916,24 +923,30 @@ h4 {
         transition: .3s all linear;
         transform: translateX(100%);
     }
-    .header__navigation_active{
+
+    .header__navigation_active {
         transform: translateX(0);
     }
-    .navigation{
+
+    .navigation {
         display: block;
     }
-    .navigation__item{
+
+    .navigation__item {
         text-align: center;
         margin: 0;
 
     }
-    .navigation__item:last-child{
+
+    .navigation__item:last-child {
         margin: 0;
     }
-    .navigation__link{
+
+    .navigation__link {
         color: #717171;
     }
-    .header__nav-close{
+
+    .header__nav-close {
         width: 25px;
         height: 25px;
         position: absolute;
@@ -941,7 +954,8 @@ h4 {
         right: 10px;
         z-index: 11;
     }
-    .header__nav-close-line{
+
+    .header__nav-close-line {
         display: block;
         width: 100%;
         height: 2px;
@@ -949,12 +963,15 @@ h4 {
         position: absolute;
         top: 50%;
     }
-    .header__nav-close-line:first-child{
+
+    .header__nav-close-line:first-child {
         transform: translateY(-50%) rotate(45deg);
     }
-    .header__nav-close-line:last-child{
+
+    .header__nav-close-line:last-child {
         transform: translateY(-50%) rotate(-45deg);
     }
+
     /*WELCOME MOBILE*/
     .welcome {
         padding: 26px 0 24px 0;
