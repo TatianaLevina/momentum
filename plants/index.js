@@ -5,13 +5,17 @@ console.log('Максимальный балл 100\n Вёрстка валидн
     const menuNav = document.querySelector('.header__navigation');
     const menuCloseItem = document.querySelector('.header__nav-close');
     const menuLinks = document.querySelectorAll('.navigation__link');
+    const menuOutside = document.querySelector('.header__burger_outside');
     burgerItem.addEventListener('click', () => {
         menuNav.classList.add('header__navigation_active');
     });
     menuCloseItem.addEventListener('click', () => {
         menuNav.classList.remove('header__navigation_active');
     });
-    if (window.innerWidth <= 380) {
+    menuOutside.addEventListener('click', () => {
+        menuNav.classList.remove('header__navigation_active');
+    });
+    if (window.innerWidth <= 699) {
         for (let i = 0; i < menuLinks.length; i += 1) {
             menuLinks[i].addEventListener('click', () => {
                 menuNav.classList.remove('header__navigation_active');
