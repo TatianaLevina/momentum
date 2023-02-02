@@ -27,3 +27,56 @@ console.log('Максимальный балл 75\n Вёрстка соотве�
         }
     }
 }());
+
+const button = document.querySelectorAll('.button');
+
+const buttonGarden = document.querySelector('.button_garden');
+const buttonLawn = document.querySelector('.button_lawn');
+const buttonPlanting = document.querySelector('.button_planting');
+const cardGarden = document.querySelectorAll('.project_garden');
+const cardLawn = document.querySelectorAll('.project_lawn');
+const cardPlanting = document.querySelectorAll('.project_planting');
+
+let mapCardButton = new Map([
+    [buttonGarden, cardGarden],
+    [buttonLawn, cardLawn],
+    [buttonPlanting, cardPlanting]
+]);
+
+for (let sectionButton of mapCardButton.keys()) {
+    sectionButton.addEventListener('click', (e) =>{
+    
+        e.preventDefault();
+
+        let activeButtonCount = 0;
+        for (let button of mapCardButton.keys()) {
+            if (button.classList.contains('hover')){
+                activeButtonCount += 1;
+            }
+        }
+        if (!sectionButton.classList.contains('hover')){
+            if (activeButtonCount > 1){
+                return;
+            }
+            activeButtonCount += 1;
+        }
+        else {
+            activeButtonCount -= 1;
+        }
+        
+        sectionButton.classList.toggle('hover');
+
+        for (let [button, cards] of mapCardButton) {
+            if (!button.classList.contains('hover') && activeButtonCount > 0) {
+                cards.forEach(element => {
+                    element.classList.add('blur-effect');
+                }); 
+            } else {
+                cards.forEach(element => {
+                    element.classList.remove('blur-effect');
+                }); 
+            }
+        }
+    });
+}
+

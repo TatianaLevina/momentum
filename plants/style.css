@@ -37,10 +37,10 @@ h4 {
     cursor: pointer;
 }
 
-.button:hover {
+/*.button:hover {
     background-color: #E06733;
     color: #ffffff;
-}
+}*/
 
 .layout-3-column {
     display: flex;
@@ -53,6 +53,7 @@ h4 {
     justify-content: space-between;
 
 }
+
 
 /*Style header*/
 .header {
@@ -336,16 +337,27 @@ h4 {
     margin-bottom: 55px;
 
 }
-
+.projects__first-row{
+    transition: all .3s;
+}
 .projects__second-row {
     grid-column: span 2;
     margin-bottom: 121px;
+    transition: all .3s;
 }
 
 .block-shadowed {
     box-sizing: border-box;
     border: 1px solid #E3E1D5;
     border-radius: 0 0 20px 20px;
+}
+.hover {
+    background-color: #E06733;
+    color: #ffffff;
+}
+
+.blur-effect{
+    filter: blur(8px);    
 }
 
 /*END style services*/
@@ -456,7 +468,41 @@ h4 {
     display: inline-block;
     text-align: center;
 }
+.accordion__body_text{
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171; 
+}
+.accordion__body_price{   
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+.accordion__body_money{
+    font-weight: 700;
+    font-size: 16px;
+    color: #E06733;
+}
+.button_order{
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+    /*border: none;*/
+    width: 86px;
+    height: 25px;
+}
+.accordion__item_show{
 
+}
+.accordion__item:not(.accordion__item_show) .accordion__body {
+    display: none;
+}
+  
 /*END style prices*/
 
 /*Style contacts*/
