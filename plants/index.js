@@ -1,4 +1,4 @@
-console.log('Максимальный балл 100\n При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50\n Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50\n В разделе contacts реализован select с выбором городов +0\n\n');
+console.log('Максимальный балл 100\n При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50\n Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50\n В разделе contacts реализован select с выбором городов +25\n\n');
 //For Burger
 (function () {
     const burgerItem = document.querySelector('.burger');
