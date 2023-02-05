@@ -476,6 +476,7 @@ h4 {
     text-align: center;
 }
 .accordion__body_text{
+    margin-top: 12px;
     position: relative;
     font-weight: 300;
     font-size: 10px;
@@ -484,6 +485,7 @@ h4 {
     padding-top: 6px;   
 }
 .accordion__body_text::before{
+    
     box-sizing: border-box;
     display: block;
     content: '';
@@ -571,37 +573,164 @@ h4 {
 
 .contacts__accordion {
     order: 3;
+    position: relative;
+    z-index: 1;
 }
-
-.accordion__header_contacts {
-    margin-top: 148px;
-    padding-left: 20px;
-    padding-right: 35px;
+.contacts__accordion_item{
     box-sizing: border-box;
+    margin-top: 148px;    
     width: 450px;
     height: 50px;
-    font-size: 20px;
-    line-height: 40px;
-    /* identical to box height, or 200% */
-    letter-spacing: 0.05em;
     color: #717171;
     background: #D6E7D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px;
+    
+}
+
+.accordion__header_contacts {
+    padding-left: 20px;
+    padding-right: 35px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
+.accordion__header_contacts_open{
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+}
 
-.contacts__accordion__arrow {
+.contacts__accordion_arrow {
     background-image: url(./assets/svg/accordion_btn_dark.svg);
     width: 16px;
     height: 16px;
     display: inline-block;
     text-align: center;
 }
+.contacts__accordion_arrow_open {
+    background-image: url(./assets/svg/drop_btn.svg);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    text-align: center;
+}
+.accordion__body_contacts{
+    display: none;
+    
+}
+.accordion__body_contacts_open{
+    
+    padding: 27px 50px 31px 20px;
+    display: block;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    background: #DCE9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
+}
+.contacts__list{
+    position: relative;
+    padding-left: 6px;
+}
+.contacts__link::after{
+    box-sizing: border-box;
+    display: block;
+    content: '';
+    width: 380px;
+    height: 1px;
+    background-color: #D9D9D9;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.contacts__link{
+    text-decoration: none;
+    color: #499A18;
+    cursor: pointer;
+}
+.form__wrapper{
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    width: 448px;
+    height: 214px;
+    
+    
+}
+.form__content{
+    width: 339px;
+    height: 139px;
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);*/
+    padding: 17px 76px 0px 33px;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+}
+.content_left{
+    color: #000000;
+    
+}
+.content_right{
+    color: #717171;
+    margin-left: 5px;
+}
+.button__call{
+    box-sizing: border-box;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    
+    width: 122px;
+    height: 26px;
+    margin-left: 162px;
+    margin-bottom: 32px;
+}
+.link__call{
+    text-decoration: none;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    color: #717171;
+}
+.form{
+    position: relative;
+    z-index: -1;
+}
+.canandaigua__form{
+    display: none;
+}
+.newyork__form{
+    display: none;
+}
+.yonkers__form{
+    display: none;
+}
+.sherrill__form{
+    display: none;
+}
 
+.form_visible{
+    display:block;
+    margin-top: 47px;
+}
+.header_selected-point {
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+}
 .background__woman {
     order: 1;
     display: block;
@@ -1370,7 +1499,7 @@ h4 {
     .accordion__item_open{  /**/
         background: #D6E7D2;
         width: 180px;
-        height: 154px;
+        height: 180px;
         box-sizing: border-box;
         margin-bottom: 13.92px;
         padding: 15px 30px;
