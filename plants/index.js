@@ -21,13 +21,13 @@ console.log('Максимальный балл 100\n При нажатии на 
     if (window.innerWidth <= 699) {
         for (let i = 0; i < menuLinks.length; i += 1) {
             menuLinks[i].addEventListener('click', () => {
-                menuNav.classList.remove('header__navigation_active');
+                menuNav.classList.toggle('header__navigation_active');
                 document.body.classList.remove('_lock');
             });
         }
     }
 }());
-
+//For Blurring
 const button = document.querySelectorAll('.button');
 
 const buttonGarden = document.querySelector('.button_garden');
@@ -79,7 +79,7 @@ for (let sectionButton of mapCardButton.keys()) {
         }
     });
 }
-
+//For Price Accordion
 const content = document.querySelectorAll('.accordion__body');
 const accordion = document.querySelectorAll('.accordion');
 const arrows = Array.from(document.querySelectorAll('.accordion__arrow'));
@@ -100,3 +100,52 @@ for (let i = 0; i < arrows.length; i++) {
     });
 }
 
+//For Select contacts
+const bodyContacts = document.querySelector('.accordion__body_contacts');
+const accordionContacts = document.querySelector('.contacts__accordion');
+const headerContacts = document.querySelector('.accordion__header_contacts');
+const arrowContacts = document.querySelector('.contacts__accordion_arrow');
+
+
+arrowContacts.addEventListener("click", () => {
+        
+    bodyContacts.classList.toggle('accordion__body_contacts_open');
+    accordionContacts.classList.toggle('contacts__accordion_item_open');
+    arrowContacts.classList.toggle('contacts__accordion_arrow_open');
+    headerContacts.classList.toggle('accordion__header_contacts_open');
+
+});
+
+const arrForm = document.querySelectorAll('.form');
+const arrLink = document.querySelectorAll('.contacts__link');
+const arrBtnCall = document.querySelectorAll('.button__call');
+
+const contactsHeaderText = document.querySelector('.accordion__city');
+
+for (let i = 0; i < arrLink.length; i++ ){
+    // arrBtnCall[i].addEventListener('click',() =>{
+    //     window.location.href='tel:12345';
+    // });
+
+    arrLink[i].addEventListener('click', () => {
+        bodyContacts.classList.toggle('accordion__body_contacts_open');
+        accordionContacts.classList.toggle('contacts__accordion_item_open');
+        arrowContacts.classList.toggle('contacts__accordion_arrow_open');
+        if (contactsHeaderText.innerHTML === arrLink[i].innerHTML) {
+            return;
+        }
+        headerContacts.classList.add('header_selected-point');
+        for (let j = 0; j < arrForm.length; j++){
+            if (i === j){
+                arrForm[j].classList.toggle('form_visible');
+            } else {
+                arrForm[j].classList.remove('form_visible');
+            }
+        }
+        
+
+        contactsHeaderText.innerHTML = arrLink[i].innerHTML;
+
+
+    })
+}
