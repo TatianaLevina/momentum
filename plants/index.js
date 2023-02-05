@@ -1,4 +1,4 @@
-console.log('Максимальный балл 75\n Вёрстка соответствует макету. Ширина экрана 768px +24\n Вёрстка соответствует макету. Ширина экрана 380px +24\n Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n На ширине экрана 380рх и меньше реализовано адаптивное меню +22 (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)\n');
+console.log('Максимальный балл 100\n При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50\n Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50\n В разделе contacts реализован select с выбором городов +0\n\n');
 //For Burger
 (function () {
     const burgerItem = document.querySelector('.burger');
@@ -75,6 +75,26 @@ for (let sectionButton of mapCardButton.keys()) {
                 cards.forEach(element => {
                     element.classList.remove('blur-effect');
                 }); 
+            }
+        }
+    });
+}
+
+const content = document.querySelectorAll('.accordion__body');
+const accordion = document.querySelectorAll('.accordion');
+const arrows = Array.from(document.querySelectorAll('.accordion__arrow'));
+
+for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener("click", () => {
+        for (let j = 0; j < content.length; j++) {
+            if (i == j) {
+                content[j].classList.toggle('accordion__body_open');
+                accordion[j].classList.toggle('accordion__item_open');
+                arrows[j].classList.toggle('prices-accordion__arrow_open');
+            } else {
+                content[j].classList.remove('accordion__body_open');
+                accordion[j].classList.remove('accordion__item_open');
+                arrows[j].classList.remove('prices-accordion__arrow_open');
             }
         }
     });
