@@ -44,18 +44,18 @@ let mapCardButton = new Map([
 ]);
 
 for (let sectionButton of mapCardButton.keys()) {
-    sectionButton.addEventListener('click', (e) =>{
-    
+    sectionButton.addEventListener('click', (e) => {
+
         e.preventDefault();
 
         let activeButtonCount = 0;
         for (let button of mapCardButton.keys()) {
-            if (button.classList.contains('hover')){
+            if (button.classList.contains('hover')) {
                 activeButtonCount += 1;
             }
         }
-        if (!sectionButton.classList.contains('hover')){
-            if (activeButtonCount > 1){
+        if (!sectionButton.classList.contains('hover')) {
+            if (activeButtonCount > 1) {
                 return;
             }
             activeButtonCount += 1;
@@ -63,18 +63,18 @@ for (let sectionButton of mapCardButton.keys()) {
         else {
             activeButtonCount -= 1;
         }
-        
+
         sectionButton.classList.toggle('hover');
 
         for (let [button, cards] of mapCardButton) {
             if (!button.classList.contains('hover') && activeButtonCount > 0) {
                 cards.forEach(element => {
                     element.classList.add('blur-effect');
-                }); 
+                });
             } else {
                 cards.forEach(element => {
                     element.classList.remove('blur-effect');
-                }); 
+                });
             }
         }
     });
@@ -108,7 +108,7 @@ const arrowContacts = document.querySelector('.contacts__accordion_arrow');
 
 
 arrowContacts.addEventListener("click", () => {
-        
+
     bodyContacts.classList.toggle('accordion__body_contacts_open');
     accordionContacts.classList.toggle('contacts__accordion_item_open');
     arrowContacts.classList.toggle('contacts__accordion_arrow_open');
@@ -121,13 +121,16 @@ const arrLink = document.querySelectorAll('.contacts__link');
 const arrBtnCall = document.querySelectorAll('.button__call');
 
 const contactsHeaderText = document.querySelector('.accordion__city');
+const backgroundContacts = document.querySelector('.background__woman');
+const titleContacts = document.querySelector('.contacts__title');
 
-for (let i = 0; i < arrLink.length; i++ ){
+for (let i = 0; i < arrLink.length; i++) {
     // arrBtnCall[i].addEventListener('click',() =>{
     //     window.location.href='tel:12345';
     // });
 
     arrLink[i].addEventListener('click', () => {
+
         bodyContacts.classList.toggle('accordion__body_contacts_open');
         accordionContacts.classList.toggle('contacts__accordion_item_open');
         arrowContacts.classList.toggle('contacts__accordion_arrow_open');
@@ -135,17 +138,25 @@ for (let i = 0; i < arrLink.length; i++ ){
             return;
         }
         headerContacts.classList.add('header_selected-point');
-        for (let j = 0; j < arrForm.length; j++){
-            if (i === j){
+        for (let j = 0; j < arrForm.length; j++) {
+            if (i === j) {
                 arrForm[j].classList.toggle('form_visible');
             } else {
                 arrForm[j].classList.remove('form_visible');
             }
         }
-        
+
 
         contactsHeaderText.innerHTML = arrLink[i].innerHTML;
-
+        if (window.innerWidth <= 1439 && window.innerWidth >= 700) {
+            backgroundContacts.classList.add('background__woman_tablet_form');
+        }
+        if (window.innerWidth <= 699) {
+            backgroundContacts.classList.add('background__woman_mobile_form');
+        }
+        if (window.innerWidth <= 699) {
+            titleContacts.classList.add('contacts__title_open_form');
+        }
 
     })
 }
