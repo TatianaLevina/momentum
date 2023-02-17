@@ -1,9 +1,11 @@
 
 const time = document.querySelector('.time');
 const dateFull = document.querySelector('.date');
+
 const greeting = document.querySelector('.greeting');
 const inputName = document.querySelector('.name');
 const body = document.body;
+
 const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
 
@@ -13,6 +15,31 @@ const weatherDescription = document.querySelector('.weather-description');
 const inputCity = document.querySelector('.city');
 const wind = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
+
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+const btnChangeQuote = document.querySelector('.change-quote');
+
+//Local storage
+inputName.addEventListener('click', setLocalStorage);
+inputCity.addEventListener('click', setLocalStorage);
+
+function setLocalStorage() {
+    localStorage.setItem('inputName', inputName.value);
+    localStorage.setItem('inputCity', inputCity.value);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+    if (localStorage.getItem('inputName')) {
+        inputName.value = localStorage.getItem('inputName');
+    }
+    if (localStorage.getItem('inputCity')) {
+        inputCity.value = localStorage.getItem('inputCity');
+    }
+}
+window.addEventListener('load', getLocalStorage);
+
 
 //Add time 
 function showTime() {
@@ -52,19 +79,7 @@ function showGreeting() {
     greeting.textContent = greetingText;
 }
 
-inputName.addEventListener('click', setLocalStorage);
 
-function setLocalStorage() {
-    localStorage.setItem('inputName', inputName.value);
-}
-window.addEventListener('beforeunload', setLocalStorage);
-
-function getLocalStorage() {
-    if (localStorage.getItem('inputName')) {
-        inputName.value = localStorage.getItem('inputName');
-    }
-}
-window.addEventListener('load', getLocalStorage);
 
 //Background
 
@@ -111,22 +126,6 @@ slidePrev.addEventListener('click', getSlidePrev);
 
 //Add weather
 
-inputCity.addEventListener('click', setLocalStorage);
-
-function getLocalStorage() {
-    if (localStorage.getItem('inputCity')) {
-        inputCity.value = localStorage.getItem('inputCity');
-    }
-}
-window.addEventListener('load', getLocalStorage);
-
-function setLocalStorage() {
-    localStorage.setItem('inputCity', inputCity.value);
-}
-window.addEventListener('beforeunload', setLocalStorage);
-
-
-
 async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&lang=ru&appid=0449508d9f0392966aa921f5f8fcee92&units=metric`;
     const res = await fetch(url);
@@ -147,4 +146,22 @@ function setCity(event) {
 
 document.addEventListener('DOMContentLoaded', getWeather);
 inputCity.addEventListener('keypress', setCity);
+
+//Add quotes
+let randomNumQuote = getRandomNum(0, 1642);
+
+async function getQuotes(num) {
+    const quotes = 'data.json';
+    const res = await fetch(quotes);
+    const data = await res.json();
+
+    quote.textContent = `${data[num].text}`;
+    author.textContent = `${data[num].author}`;
+}
+getQuotes(randomNumQuote);
+
+btnChangeQuote.addEventListener('click', () => {
+    randomNumQuote = getRandomNum(0, 1642);
+    getQuotes(randomNumQuote);
+})
 
