@@ -20,6 +20,11 @@ const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
 const btnChangeQuote = document.querySelector('.change-quote');
 
+const btnPlay = document.querySelector('.play');
+const btnPlayPrev = document.querySelector('.play-prev');
+const btnPlayNext = document.querySelector('.play-next');
+const playListContainer = document.querySelector('.play-list');
+
 //Local storage
 inputName.addEventListener('click', setLocalStorage);
 inputCity.addEventListener('click', setLocalStorage);
@@ -165,3 +170,82 @@ btnChangeQuote.addEventListener('click', () => {
     getQuotes(randomNumQuote);
 })
 
+//Add audio
+
+let isPlay = false;
+let playNum = 0;
+
+const audio = new Audio();
+
+function playAudio() {
+    audio.src = playList[playNum].src;
+    audio.currentTime = 0;
+
+    if (!isPlay) {
+        audio.play();
+        isPlay = true;
+        btnPlay.classList.add('pause');
+    } else {
+        audio.pause();
+        isPlay = false;
+        btnPlay.classList.remove('pause');
+    }
+    for (let i = 0; i < playListContainer.children.length; i++){
+        if (i === playNum){
+            playListContainer.children[i].classList.add('item-active');
+        } else {
+            playListContainer.children[i].classList.remove('item-active');
+        }
+    }
+}
+
+btnPlay.addEventListener('click', () => {
+    //btnPlay.classList.toggle('pause');
+    playAudio();
+});
+
+function playNext() {
+    isPlay = false;
+    if (playNum === 3) {
+        playNum = 0;
+    } else {
+        playNum += 1;
+    }
+    playAudio();
+}
+function playPrev() {
+    isPlay = false;
+    if (playNum === 0) {
+        playNum = 3;
+    } else {
+        playNum -= 1;
+    }
+    playAudio();
+}
+
+
+btnPlayNext.addEventListener('click', () => {
+    playNext();
+})
+btnPlayPrev.addEventListener('click', () => {
+    playPrev();
+})
+
+
+for (let i = 0; i < playList.length; i++) {
+    const li = document.createElement('li');
+    li.classList.add('play-item');
+    li.textContent = playList[i].title;
+    playListContainer.append(li);
+}
+audio.addEventListener('ended', () => {
+    if (playNum === 3) {
+        playNum = 0;
+    } else {
+        playNum += 1;
+    }
+    isPlay = false;
+    playAudio();
+})
+
+import playList from './playList.js';
